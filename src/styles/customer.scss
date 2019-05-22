@@ -1,0 +1,25 @@
+// Add 
+ul{list-style: none; -webkit-padding-start: 0px;}
+
+.el-table td.indent1{ text-indent:24px}
+.el-table td.indent2{ text-indent:48px}
+.el-table td.indent3{ text-indent:72px}
+
+.el-table td.level0style {background-color: #E4E7ED; }
+.el-table td.level1style {background-color: #EBEEF5; }
+
+.el-card >>> .el-card__body {height:100%}
+.el-card{height:100%; overflow:auto}
+
+.contentwrapper{padding:10px 20px;overflow:auto}
+@media screen and (max-device-width: 420px) {
+  .el-card{
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border:none;
+  }
+  .el-card .el-card__body{padding:5px}
+  .contentwrapper{padding:0 ;overflow:auto}
+  h4{ margin-inline-start: 0.33em; margin-block-start: 0.33em;    margin-block-end: 0.33em;}
+  ul{margin-block-start: 0.33em;    margin-block-end: 0.33em;}
+}
