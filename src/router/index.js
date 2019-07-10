@@ -95,16 +95,22 @@ export const asyncRouterMap = [
     ]
   },
   {
-    path: '/personsetting',
+    path: '/bld',
     component: Layout,
-    name: 'personsetting',
+    name: 'bld',
     meta: { title: '人员设置', icon: 'example', roles: ['admin'] },
     children: [
       {
-        path: 'PersonApprove',
-        name: 'PersonApprove',
-        component: () => import('@/views/personsetting/personApproveList'),
-        meta: { title: '人员审核', icon: 'table', roles: ['admin'] }
+        path: 'tables',
+        name: 'tables',
+        component: () => import('@/views/bld/tables'),
+        meta: { title: '桌台', icon: 'table', roles: ['admin'] }
+      },
+      {
+        path: 'bldsale',
+        name: 'bldsale',
+        component: () => import('@/views/bld/pos'),
+        meta: { title: '点餐', icon: 'table', roles: ['admin'] }
       }
     ]
   },
@@ -114,6 +120,12 @@ export const asyncRouterMap = [
     component: Layout,
     meta: { title: '系统设置', icon: 'example', roles: ['admin'] },
     children: [
+      {
+        path: 'PersonApprove',
+        name: 'PersonApprove',
+        component: () => import('@/views/personsetting/personApproveList'),
+        meta: { title: '人员审核', icon: 'table', roles: ['admin'] }
+      },
       {
         path: 'UserTypeList',
         name: 'UserTypeList',

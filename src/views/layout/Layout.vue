@@ -1,16 +1,8 @@
 <template>
   <div :class="classObj" class="app-wrapper">
-    <div v-if="!anonymous && !normal">
-      <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"/>
-    </div>
-    <div v-if="!anonymous && !normal"><sidebar class="sidebar-container"/></div>
-    <div v-if="!anonymous && !normal">
-      <div class="main-container">
-        <div v-if="!anonymous && !normal"><navbar/></div>
-        <app-main/>
-      </div>
-    </div>
-    <div v-else >
+    <div v-if="device==='mobile'&&sidebar.opened" class="drawer-bg" @click="handleClickOutside"/>
+    <sidebar class="sidebar-container"/>
+    <div class="main-container">
       <div v-if="!anonymous && !normal"><navbar/></div>
       <app-main/>
     </div>

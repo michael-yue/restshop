@@ -35,7 +35,7 @@ service.interceptors.response.use(
       return response.data
     } else if (res.code === 20001) {
       MessageBox.alert(
-        '发生错误，原因：' + res.data,
+        '发生错误，原因：' + res.message,
         '提示信息',
         {
           confirmButtonText: '确定',

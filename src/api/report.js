@@ -26,6 +26,18 @@ export function getTransList(branchid, startdate, enddate, pagenum, pagesize) {
   })
 }
 
+export function getTransListAll(branchid, startdate, enddate) {
+  return request({
+    url: '/restshop/getTransListAll',
+    method: 'get',
+    params: {
+      branchid,
+      startdate,
+      enddate
+    }
+  })
+}
+
 export function deleteTrans(param) {
   return request({
     url: '/restshop/deleteTrans',
